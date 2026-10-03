@@ -1,0 +1,158 @@
+/* Estilos Gerais de Modernização */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container para centralizar e dar "cara de site" */
+.container, main {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos com cor e destaque */
+h1, h2, h3 {
+  color: #1b4332;
+  margin-bottom: 15px;
+}
+
+h1 {
+  border-bottom: 3px solid #2d6a4f;
+  padding-bottom: 10px;
+}
+
+/* Ajuste da imagem principal */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 15px 0;
+}
+
+/* Menu de navegação estilizado */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  background: #2d6a4f;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+	/* Estilos para Badges (Etiquetas) */
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.badge-urgente { background-color: #e74c3c; } /* Vermelho alerta */
+.badge-regular { background-color: #f39c12; } /* Laranja aviso */
+.badge-sucesso { background-color: #27ae60; } /* Verde sucesso */
+
+/* Estilos para Caixa de Alerta / Toast */
+.alerta {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.alerta-sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+/* Dropdown Acessível para Desktop */
+  .menu-item {
+    position: relative;
+    display: inline-block;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: var(--sombra-suave, 0 4px 6px rgba(0,0,0,0.1));
+    border-radius: var(--border-radius, 8px);
+    list-style: none;
+    padding: 10px;
+    min-width: 180px;
+    z-index: 1000;
+  }
+
+  /* Exibe no :hover E no :focus-within (para navegação via teclado) */
+  .menu-item:hover .submenu,
+  .menu-item:focus-within .submenu {
+    display: block;
+  }
+
+  /* Validação de Formulários com Estados de Erro e Sucesso */
+  .campo-entrada {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #ccc;
+    border-radius: var(--border-radius, 8px);
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .campo-entrada:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+
+  /* Sucesso: Borda Verde */
+  .campo-entrada:valid {
+    border-color: #27ae60;
+  }
+
+  /* Erro: Borda Vermelha (apenas quando preenchido incorretamente) */
+  .campo-entrada:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+  }
+
+  /* Modal Simples de Confirmação */
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: var(--border-radius, 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-conteudo {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: var(--border-radius, 8px);
+    box-shadow: var(--sombra-suave, 0 4px 12px rgba(0,0,0,0.15));
+    max-width: 400px;
+    text-align: center;
+  }
